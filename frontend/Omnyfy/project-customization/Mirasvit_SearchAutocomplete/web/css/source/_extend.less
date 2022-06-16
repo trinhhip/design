@@ -1,0 +1,107 @@
+& when (@media-common = true) {
+    .mst-searchautocomplete__index.popular {
+        ul {
+            li {
+                padding: 0.7rem 0 0.7rem 0.5rem;
+                a {
+                    color: #5B5353;
+                }
+            }
+        }
+    }
+    .mst-searchautocomplete__highlight {
+        color: #EB3300;
+    }
+    .mst-searchautocomplete__wrapper {
+        font-size: 14px;
+    }
+    .mst-searchautocomplete__spinner {
+        .spinner-item {
+            height: 10px;
+            top: 5px;
+            width: 10px;
+        }
+    }
+    .mst-searchautocomplete__item {
+        &.magento_catalog_product {
+            .description {
+                color: #777777;
+            }
+            .price-label {
+                color: #777777;
+                font-weight: 400;
+                font-size: 12px;
+            }
+            .price {
+                color: #333333;
+                font-weight: 400;
+                font-family: Poppins;
+                font-size: 14px;
+            }
+        }
+    }
+    .mst-searchautocomplete__autocomplete {
+        min-height: 32.8px;
+        .mst-searchautocomplete__index-title {
+            font-family: 'Poppins';
+            text-transform: unset;
+            color: #777777;
+        }
+        .mst-searchautocomplete__empty-result {
+            font-size: 14px;
+        }
+        .mst-searchautocomplete__show-all {
+            a {
+                display: inline-block;
+                font-size: 14px;
+                &:hover {
+                    color: #EB3300;
+                }
+            }
+        }
+        ul {
+            li {
+                padding: 5px 0 0;
+                &:last-child {
+                    padding-bottom: 5px;
+                }
+                a.title {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .mst-searchautocomplete__item {
+        &.magento_catalog_product {
+            .description {
+                font-size: 14px;
+            }
+            .price {
+                .price-label {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .page-header.type18 {
+        .header {
+            .block-search {
+                input {
+                    text-transform: unset;
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .mst-searchautocomplete__item.magento_catalog_product {
+        flex-wrap: wrap;
+        .meta {
+            width: calc(~"100% - 9rem");
+        }
+        .store {
+            width: 100%;
+        }
+    }
+}

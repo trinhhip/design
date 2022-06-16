@@ -1,0 +1,97 @@
+//
+//    Common
+//--------------------------------------
+
+& when (@media-common = true) {
+
+.form.send.friend {
+    display: block;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    background: #fff;
+    border-top: 4px solid #DBC9B3;
+    padding: 35px 25px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.08);
+    color: #0C0C0B;
+
+    .recipients {
+        margin-bottom: 18px;
+    }
+
+    .actions-toolbar {
+        & > .secondary {
+            height: auto;
+        }
+    }
+
+    .additional {
+        margin-top: 18px;
+    }
+
+    .fieldset {
+        .additional {
+            .actions-toolbar {
+                margin-bottom: 18px;
+            }
+            button.action.remove {
+                margin-left: 0;
+            }
+        }
+        .actions-toolbar {
+            & > .secondary {
+                flex: unset;
+                .action.add {
+                    margin-top: 18px;
+                }
+            }
+        }
+    }
+
+    &:extend(.abs-add-fields all);
+    .fieldset{
+        .legend{
+            font-size: 18px;
+            color: #0C0C0B !important;
+        }
+        .field{
+            .label{
+                font-size: 18px;
+            }
+            .control{
+                div.mage-error[generated]{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.product-social-links, .moved-add-to-links {
+    .action.mailto.friend {
+        &:extend(.abs-actions-addto all);
+        .lib-icon-font-symbol(
+            @_icon-font-content: @icon-envelope,
+            @_icon-font-position: before
+        );
+    }
+}
+}
+
+//
+//    Desktop
+//--------------------------------------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .form.send.friend {
+        &:extend(.abs-add-fields-desktop all);
+        &:extend(.abs-form-field-column-2 all);
+        .fieldset {
+            .field {
+
+            }
+            .field.text {
+                //&:extend(.abs-form-field-revert-column-1 all);
+                width: 100%;
+            }
+        }
+    }
+}

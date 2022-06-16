@@ -1,0 +1,54 @@
+"Please enter a password with at most %1 characters.","Your password must contain an Uppercase letter, a number and a minimum of %1 characters."
+"Please enter a password with at least %1 characters.","Your password must contain an Uppercase letter, a number and a minimum of %1 characters."
+"The password can't begin or end with a space.","Your password must contain an Uppercase letter, a number and a minimum of %1 characters."
+"Minimum of different classes of characters in password is %1. Classes of characters: Lower Case, Upper Case, Digits, Special Characters.","Your password must contain an Uppercase letter, a number and a minimum of 8 characters."
+"Please enter the same value again.","The value entered in the confirmed password field does not match what you have entered in the password field."
+"Minimum length of this field must be equal or greater than %1 symbols. Leading and trailing spaces will be ignored.","Your password must contain an Uppercase letter, a number and a minimum of %1 characters."
+"Please enter a valid email address (Ex: johndoe@domain.com).","The address you entered is invalid. Please enter a valid address eg: Buyer@domain.com."
+"Thanks for contacting us with your comments and questions. We'll respond to you very soon.","Thank you for your inquiry. Our representative will be in touch with you shortly."
+"%1 has been added to your Wish List.","%1 has been added to your Wishlist."
+"Click <a href=""%1"">here</a> to continue shopping.","Click <a href=""%1"">here</a> to continue shopping or add the item to your shopping cart."
+"We found other products you might like!","You May Also Like"
+"Buy %1 for %2 each and","%1 for %2 each"
+"Buy %1 for %2 each and <strong class=""benefit"">save<span class=""percent tier-%3"">&nbsp;%4</span>%</strong>","%1 for %2 each"
+"This email address has already subscribed. Please try again","You have already subscribed using this email address."
+"Thank you for signing up! Stay tuned for our upcoming launch.","Thank you for signing up!"
+"You have not set a default shipping address.","You don't have any saved addresses."
+"You have not set a default billing address.","You don't have any saved addresses."
+"We have saved your subscription.","You are subscribed to access our new arrivals & offerings."
+"We have updated your subscription.","You are subscribed to access our new arrivals & offerings."
+"You are subscribed to ""General Subscription"".","You are subscribed to access our new arrivals & offerings."
+"We have removed your newsletter subscription.","You aren't subscribed to access our new arrivals & offerings."
+"You aren't subscribed to our newsletter.","You aren't subscribed to access our new arrivals & offerings."
+"Sign In", "Login"
+"Shipping Address", "Shipping"
+"There is already an account with this email address. If you are sure that it is your email address, <a href=""%1"">click here</a> to get your password and access your account.","An account with this email address already exists. <a href=""/customer/account/login/"">Click here</a> to login"
+"Hot Searches","Popular searches"
+"Search...","Search"
+"General Subscription","Newsletter subscription"
+"Thank you for registering with %1.","Welcome to %1! Your account has been successfully created."
+"You have signed out and will go to our homepage in 5 seconds.","You have signed out and will be taken to our homepage in a few seconds.",module,Magento_Customer
+"Apply Discount Code","Add a Promo Code",module,Magento_Checkout
+"Apply Discount","Apply",module,Magento_Checkout
+"Are you sure you would like to remove this item from the shopping cart?","Are you sure you want to remove this item from your cart?",module,Magento_Checkout
+"Email to a Friend","Share via Email"
+"Invitee","Recipients",module,Magento_SendFriend
+"Add Invitee","Add Recipient",module,Magento_SendFriend
+"The link to a friend was sent.","Your link was sent!",module,Magento_SendFriend
+"Country","Country/Region"
+"You saved the account information.","Your update has been successful",module,Magento_Customer
+"Order Summary","Summary",module,Magento_Checkout
+"By checking this box you agree to receive emails about new designers, products and exclusives from Vermillion Lifestyle.","Subscribe to the latest news and exclusive offers from Vermillion"
+"Enter discount code","Promo Code",module,Magento_Customer
+"Gift or Discount Code","Add Promo Code",module,Magento_Checkout
+"Default Category","All Products"
+"State/Province","State/ Province (if applicable)"
+"Shipping Methods","Shipping Options"
+"Shipping Method:","Shipping Option:"
+"The fewest you may purchase is %1.","Minimum Order Quantity for this item is %1.",module,Magento_CatalogInventory
+"Thank you for you interest. Our team will contact soon on your request!","Thank you for your interest. Our team will contact you soon with regards to your request!"
+"We can't find products matching the selection.","More exciting brands and products to come. Stay tuned!"
+"Search Results","Search results"
+"You have no stored payment methods.","You currently do not have any stored payment methods."
+"Out of stock","SOLD OUT"
+"Related works","Related Items"

@@ -1,0 +1,256 @@
+//
+//  Variables
+//  _____________________________________________
+
+@checkout-wrapper__margin: @indent__base;
+@checkout-wrapper__columns: 16;
+
+@checkout-step-title__border: @border-width__base solid @color-gray80;
+@checkout-step-title__font-size: 22px;
+@checkout-step-title__font-weight: @font-weight__light;
+@checkout-step-title__padding: @indent__s;
+
+@checkout-step-title-mobile__font-size: 18px;
+
+@checkout-step-content-mobile__background: @color-gray-light01;
+@checkout-step-content-mobile__margin-s: 15px;
+@checkout-step-content-mobile__margin: @indent__base -(@checkout-step-content-mobile__margin-s) @checkout-step-content-mobile__margin-s;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .checkout-index-index,
+    .checkout-onepage-success {
+        .page-title-wrapper {
+            &:extend(.abs-visually-hidden all);
+        }
+        .fieldset {
+            & > .field {
+                & > .label {
+                    font-size: 14px;
+                }
+            }
+        }
+        .payment-method-billing-address {
+            .fieldset {
+                .actions-toolbar {
+                    .action {
+                        font-family: 'Poppins';
+                    }
+                }
+            }
+        }
+    }
+
+    .checkout-payment-method {
+        .payment-method-billing-address {
+            .action-cancel {
+                color: #EB3300;
+                &:hover {
+                    color: #eb3300;
+                }
+            }
+        }
+    }
+
+    .stripe-payments-brand {
+        right: -12px;
+        top: -14px;
+    }
+
+    .checkout-container {
+        &:extend(.abs-add-clearfix all);
+        .authentication-wrapper{
+            button.action-auth-toggle{
+                color: @color-black;
+            }
+            .authentication-dropdown{
+                border-top: solid 6px #DBC9B3;
+                button.action-close{
+                    &:before{
+                        color: #DBC9B3;
+                    }
+                }
+                .modal-content{
+                    .block-customer-login{
+                        .block-title strong{
+                            font-size: 22px;
+                            font-weight: 700;
+                        }
+                    }
+                    .block-content{
+                        .fieldset{
+                            .field{
+                                .label{
+                                    span{
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                        div.mage-error[generated]{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .opc-wrapper {
+
+        .opc {
+            &:extend(.abs-reset-list all);
+        }
+
+        .step-title {
+            &:extend(.abs-checkout-title all);
+            .lib-css(border-bottom, @checkout-step-title__border);
+            color: #0C0C0B;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .order-attributes {
+            .order-attributes-form.fieldset {
+                .label {
+                    font-weight: 700;
+                    font-size: 22px!important;
+                    text-transform: uppercase;
+                }
+                input, textarea {
+                    font-family: 'Poppins';
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .checkout-index-index {
+        .nav-sections,
+        .nav-toggle,
+        .header.panel {
+
+        }
+        .logo {
+            margin-left: 0;
+        }
+        .modals-wrapper{
+            .modal-popup{
+                .action-close{
+                    &:before{
+                        color: #0C0C0B;
+                    }
+                }
+                .modal-title{
+                    color: #0c0c0b;
+                    font-size: 22px;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-family: 'Rasa regular';
+                }
+                .modal-footer{
+                    button{
+                        &.action-save-address {
+                            color: #FFFFFF;
+                            background-color: #eb3300;
+                            border-color: #eb3300;
+                        }
+                        &.action-hide-popup {
+                            color: #eb3300;
+                            background-color: #FFFFFF;
+                            border: #eb3300 1px solid;
+                        }
+                        &:hover {
+                            border-width: 1px;
+                        }
+                        background: #DBC9B3;
+                        border-radius: 5px;
+                        font-family: 'Poppins'!important;
+                        font-size: 14px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        padding: 0 10px;
+                        height: 38px;
+                        line-height: 38px;
+                        float: none;
+                    }
+                }
+                #shipping-new-address-form{
+                    .field{
+                        .label{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .page-main{
+        .opc-wrapper{
+            .form-discount{
+                .actions-toolbar{
+                    .primary{
+                        button{
+                            background: #DBC9B3;
+                            color: #0C0C0B;
+                            border: solid 1px #DBC9B3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .opc-wrapper {
+        .step-title {
+            .lib-css(font-size, @checkout-step-title-mobile__font-size);
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+        .step-content {
+            .lib-css(margin, 0 0 @checkout-step-content-mobile__margin-s);
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .checkout-index-index {
+        .page-header .minicart-wrapper {
+            display: none;
+        }
+    }
+    .page-header.type5 .block-search .label {
+        margin-right: 0;
+    }
+}
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .payment-method-billing-address {
+        .fieldset {
+            .actions-toolbar {
+                .action-cancel {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    .opc-wrapper {
+       &:extend(.abs-add-box-sizing-desktop-m all);
+        .lib-layout-column(2, 1, @checkout-wrapper__columns);
+        width: 66%;
+        padding-right: @indent__l;
+    }
+}

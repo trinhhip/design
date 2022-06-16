@@ -1,0 +1,137 @@
+// /**
+//  * Copyright © Omnyfy, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Variables for new theme
+//  ---------------------------------------------
+
+@ui-03: #F0F1F3;
+@ui-04: #D3D4D8;
+@narrow-box-width: 800px;
+@panel__background-color: #f5f5f5;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+	.complex-field {
+		display: flex;
+		justify-content: stretch;
+
+		> div:first-child {
+			width: 150px;
+			flex-basis: 150px;
+		}
+
+		> div:last-child {
+			flex-basis: 100%;
+			margin-left: 5px;
+		}
+	}
+}
+
+//
+//  Tablet
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.omnyfy_vendorsignup-index-index {
+		.vendor-signup-form-wrapper,
+		.page-title-wrapper {
+			max-width: @narrow-box-width;
+			margin: auto;
+			.signup-omnyfy{
+				.fieldset{
+					margin: 0;
+					.field{
+						.label{
+							font-size: 18px;
+						}
+					}
+					.field.dob{
+						display: none;
+					}
+				}
+				.field.choice.newsletter{
+					margin-bottom: 10px;
+					a{
+						text-decoration: underline;
+					}
+					.red-star{
+						color: red;
+					}
+				}
+				.actions-toolbar{
+					#cancel-signup{
+						display: none;
+					}
+				}
+				#contactnumber-apl{
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m)  {
+	.omnyfy_vendorsignup-index-index {
+		.vendor-signup-form-wrapper,
+		.page-title-wrapper {
+			max-width: @narrow-box-width;
+			margin: auto;
+			.signup-omnyfy{
+				.fieldset{
+					margin: 0;
+					.field{
+						.label{
+							font-size: 18px;
+						}
+						.complex-field{
+							display: block;
+							div{
+								width: 100%;
+								margin-left: 0;
+								&:last-child{
+									margin-top: 10px;
+								}
+							}
+						}
+						.control{
+							#contactnumber-apl{
+								margin-left: 0;
+								margin-top: 10px;
+							}
+						}
+					}
+					.dob{
+						display: none;
+					}
+				}
+				.field.choice.newsletter{
+					display: flex;
+					.red-star{
+						color: red;
+					}
+					margin-bottom: 10px;
+					a{
+						text-decoration: underline;
+					}
+					input,label{
+						display: inline-block;
+						vertical-align: top;
+					}
+				}
+				.actions-toolbar{
+					.action.secondary{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

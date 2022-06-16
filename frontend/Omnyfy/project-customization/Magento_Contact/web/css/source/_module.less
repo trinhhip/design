@@ -1,0 +1,99 @@
+
+& when (@media-common = true) {
+    .contact-index-index {
+        .contact-info {
+            a {
+                font-family: 'Poppins';
+                font-size: 14px;
+                line-height: 30px;
+            }
+        }
+        .page-title-wrapper {
+            display: none;
+        }
+        .fieldset > .legend, .contact-info .contacts-title {
+            color: #0C0C0B;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+        .page-main .contact-info {
+            [class^="porto-icon-"], [class*=" porto-icon-"] {
+                float: left;
+                width: 30px;
+                height: 30px;
+                background-color: #DBC9B3;
+                color: #fff;
+                line-height: 30px;
+                text-align: center;
+                font-size: 16px;
+                border-radius: 6px;
+                margin-bottom: 0;
+                margin-right: 10px;
+            }
+            p {
+                margin-left: 0;
+                margin-bottom: 0;
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+        .form.contact{
+            color: #0C0C0B;
+            .fieldset{
+                margin: 0 0 20px;
+                .fields{
+                    padding-left: 0 !important;
+                }
+                .field{
+                    .label{
+                        span{
+                            font-size: 18px;
+                        }
+                    }
+                }
+                .legend{
+                    font-family: 'PlayfairDisplay';
+                    font-size: 22px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+            }
+            .actions-toolbar{
+                .primary{
+                    button{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .contact-info{
+            color: #0C0C0B;
+            .contacts-title{
+                font-family: 'PlayfairDisplay';
+                padding-left: 0;
+                margin-top: 0;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .contact-index-index{
+        .form.contact{
+            .fieldset{
+                margin: 0 0 10px;
+            }
+        }
+        .contact-info{
+            .contacts-title{
+                margin-top: 25px;
+            }
+        }
+    }
+}

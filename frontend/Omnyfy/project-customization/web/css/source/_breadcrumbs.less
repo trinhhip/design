@@ -1,0 +1,39 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .breadcrumbs {
+        .lib-breadcrumbs();
+    }
+    .page-wrapper > .breadcrumbs {
+        padding: 0;
+        background-color: @color-white !important;
+        color: #0b0b0c !important;
+        
+        .items {
+            color: inherit;
+            padding: 10px 15px;
+            margin: 0 auto;
+            max-width: @layout__max-width;
+        }
+        
+        a, a:hover, a:focus {
+            color: #0b0b0c !important;
+        }
+        
+        .item:not(:last-child):after {
+            line-height: 15px;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .breadcrumbs {
+        display: none;
+    }
+}

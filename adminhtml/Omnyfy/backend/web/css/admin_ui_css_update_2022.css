@@ -1,0 +1,540 @@
+.menu-wrapper:before {
+    background-color: #4b576c;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 8.8rem;
+    z-index: 699;
+}
+
+.page-footer a {
+    color: #0066ff;
+    text-decoration: underline;
+}
+
+admin__menu .level-0>a {
+    color: #ffffff;
+
+}
+
+.admin__menu .level-0._active > a {
+    background-color: #64748f;
+}
+
+.admin__menu .level-0 > .submenu {
+    background-color: #64748f;
+}
+
+.admin__menu .submenu a {
+    color: #ffffff;
+  }
+
+  .admin__menu .submenu .parent .submenu-group-title {
+    color: #d4e4ff;
+}
+
+.action-primary {
+    background-color: #0066ff;
+    border-color: #0066ff;
+    color: #fff;
+    text-shadow: none;
+}
+
+a {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+.page-content {
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background: #f8f8f8; /* Changed background colour to #f8f8f8 17/01/22 */
+}
+
+.page-header {
+    margin-bottom: 1.2rem;
+    padding: 1.5rem 3rem;
+    background: #f8f8f8; /* Changed background colour to #f8f8f8 17/01/22 */
+}
+
+.menu-wrapper._fixed~.page-wrapper {
+    margin-left: 8.8rem;
+    background: #f8f8f8; /* Changed background colour to #f8f8f8 17/01/22 */
+}
+
+.page-wrapper {
+    background-color: #f8f8f8; /* Changed background colour to #f8f8f8 17/01/22 */
+    display: inline-block;
+    margin-left: -4px;
+    vertical-align: top;
+    width: calc(100% - 8.8rem);
+}
+
+.page-main-actions:not(._hidden), .page-actions._fixed {
+    background: #ffffff; /* Changed background colour to white 17/01/22 */
+    border-bottom: 1px solid #e3e3e3;
+    border-top: 1px solid #e3e3e3;
+    padding: 1.5rem;
+}
+
+
+..abs-action-primary, button.primary, .page-actions>button.action-primary, .page-actions .page-actions-buttons>button.action-primary, .page-actions .page-actions-buttons>.action.action-primary, .page-actions>button.primary, .page-actions .page-actions-buttons>button.primary, .page-actions .page-actions-buttons>.action.primary, .page-actions .page-actions.floating-header>button.action-primary, .page-actions .page-actions.floating-header>.action.action-primary, .page-actions .page-actions.floating-header>button.primary, .page-actions .page-actions.floating-header>.action.primary, .block-footer .action-add.primary, .page-actions>.block-footer .action-add.action-primary, .page-actions .page-actions-buttons>.block-footer .action-add.action-primary, .page-actions>.block-footer .action-add.primary, .page-actions .page-actions-buttons>.block-footer .action-add.primary {
+    background-color: #ffffff; /* Changed button colour */
+    border-color: #0066ff; /* Changed border colour */
+    border-width: 2px;
+   text-shadow: none; /* Remove Shadow */
+    padding-top: 8px; /* Update padding */
+    padding-bottom: 8px /* Remove padding */
+     border-radius: 3px; /* Tighten radius */
+}
+
+/* Catalogue Split Button*/
+.abs-actions-split-xl .action-default, .page-actions .actions-split .action-default {
+ margin-right: 4rem;
+    color: #0066ff;
+    text-shadow: none;
+    background: #ffffff;
+     border-color: #0066ff;
+}
+
+.page-actions .actions-split .action-toggle:after {
+    border-top-color: #9fc0f1;
+}
+
+
+
+  .admin__collapsible-block-wrapper.fieldset-wrapper {
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+    background: #fff; /* create white background for all form elements with rounded corners and segements them on the page for better separation */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+
+.action-select-wrap .action-select:before {
+    background-color: #64748f; /* Changed dropdown button colour */
+    bottom: 0;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3.2rem;
+    line-height: 2;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    border: 1px solid #979899;
+}
+
+
+.abs-action-l, .ui-dialog .ui-button, .ui-dialog .action-primary, .attribute-popup-actions .page-actions-buttons>button.action-default.primary, .modal-popup .modal-footer .action-primary, .modal-popup .modal-footer .action-secondary, .action-advanced-reports, .page-actions button, .page-actions .page-actions-buttons>button, .page-actions .page-actions-buttons>.action, .page-actions>button.action-primary, .page-actions .page-actions-buttons>button.action-primary, .page-actions .page-actions-buttons>.action.action-primary, .page-actions>button.primary, .page-actions .page-actions-buttons>button.primary, .page-actions .page-actions-buttons>.action.primary, .page-actions>button.action-secondary, .page-actions .page-actions-buttons>button.action-secondary, .page-actions .page-actions-buttons>.action.action-secondary, .page-layout-admin-login .action-primary, .admin__field-complex-attributes [class^='action-'], .steps-wizard .select-attributes-actions .action-default, .order-totals-actions .action-default, .staging-preview-item-content-wrapper>.actions-toolbar .action-primary, .popup-window .magento_buttons .ok_button, .fade .actions .primary, .attribute-popup-actions .page-actions.floating-header>button.action-default.primary, .page-actions .page-actions.floating-header>button, .page-actions .page-actions.floating-header>.action, .page-actions .page-actions.floating-header>button.action-primary, .page-actions .page-actions.floating-header>.action.action-primary, .page-actions .page-actions.floating-header>button.primary, .page-actions .page-actions.floating-header>.action.primary, .page-actions .page-actions.floating-header>button.action-secondary, .page-actions .page-actions.floating-header>.action.action-secondary, .attribute-popup-actions .page-actions-buttons>.block-footer .action-add.action-default.primary, .page-actions .block-footer .action-add, .page-actions .page-actions-buttons>.block-footer .action-add, .page-actions>.block-footer .action-add.action-primary, .page-actions .page-actions-buttons>.block-footer .action-add.action-primary, .page-actions>.block-footer .action-add.primary, .page-actions .page-actions-buttons>.block-footer .action-add.primary, .page-actions>.block-footer .action-add.action-secondary, .page-actions .page-actions-buttons>.block-footer .action-add.action-secondary {
+    font-size: 1.6rem;
+    letter-spacing: .025em;
+       font-family: "Open Sans", sans-serif; /* Updated to Open Sans from  Poppins Font */
+    /* padding-bottom: 0.6875em; */ /* Removes Padding to tighen the size of the buttons */
+    /* padding-top: 0.6875em; */
+}
+
+
+.admin__control-text, .admin__control-select, .admin__control-multiselect, .admin__control-file-label:before, .admin__control-textarea, .admin__control-addon [class*="admin__control-"][class] ~ [class*="admin__addon-"]:last-child:before, .selectmenu, .ui-datepicker .ui-datepicker-title select {
+    background-color: #fff;
+    border: 1px solid #adadad;
+    border-radius: 3px; /* tighten border radius of all form fields */
+    box-shadow: none;
+    color: #303030;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.action-default, button, .block-footer .action-add, .block-footer .action-add {
+    background: #64748f; /* Change background colour of all buttons */
+    color: #f1f1f1;
+    border-radius: 3px; /* tighten border radius of all form fields */
+    border-color: #64748f; /* Update border colour */
+    background: #64748f;
+    border-radius: 3px;
+    border-color: #64748f;
+}
+
+
+.admin__data-grid-header .admin__control-select {
+    border-radius: 3px; /* tighten border radius of all form fields */
+}
+
+.admin__data-grid-header input.admin__control-text, .admin__data-grid-header .admin__control-text {
+    border-radius: 3px; /* tighten border radius of all form fields */
+}
+
+.admin__action-dropdown {
+    padding-right: 3.3rem;
+    background-color: #f8f8f8; /* Changed background colour to #f8f8f8 17/01/22 */
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #41362f;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: -.025em;
+    padding: 0.7rem 3.3rem 0.8rem 1.5rem;
+    position: relative;
+    vertical-align: baseline;
+    z-index: 2;
+}
+
+
+
+.selectmenu-toggle:before {
+    background: #;
+    border-left: 1px solid #adadad;
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3.2rem;
+    border-radius: 3px; /* tighten border radius of all form fields */
+}
+
+.admin__data-grid-header .selectmenu {
+    border-radius: 3px; /* tighten border radius of all form fields */
+    height: 33px;
+}
+
+.data-grid th {
+    background-color: #64748f; /* Updated background colour of tables */
+    border: 1px solid #f8f8f8;
+    border-left-color: transparent;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0;
+    text-align: left;
+}
+
+.admin__data-grid-header input.admin__control-text, .admin__data-grid-header .admin__control-text {
+    border-radius: 3px; /* tighten border radius of all form fields */
+}
+
+.admin__scope-old .fieldset-wrapper, .admin__scope-old .fieldset {
+    background: #fff;
+    border: 0;
+    margin: 0;
+    padding: 20px 20px 38px; /* Changed Pading */
+    position: relative;
+    border-radius: 8px; /* Added rounded radius */
+}
+
+
+.admin__page-nav-item._active .admin__page-nav-link, .admin__page-nav-item.ui-state-active .admin__page-nav-link {
+    background: #f8f8f8; /* Changed Colour  */   
+    border-right: 1px solid #f8f8f8;
+    color: #303030;
+    margin-right: -1px;
+}
+
+.admin__page-nav, .order-sidebar {
+    background: #fff; /* Changed Colour  */
+    border: 1px solid #e3e3e3;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.admin__scope-old input[type=text], .admin__scope-old input[type=password], .admin__scope-old input[type=datetime], .admin__scope-old input[type=datetime-local], .admin__scope-old input[type=date], .admin__scope-old input[type=month], .admin__scope-old input[type=time], .admin__scope-old input[type=week], .admin__scope-old input[type=number], .admin__scope-old input[type=range], .admin__scope-old input[type=email], .admin__scope-old input[type=url], .admin__scope-old input[type=search], .admin__scope-old input.search, .admin__scope-old input[type=tel], .admin__scope-old input[type=color], .admin__scope-old textarea, .admin__scope-old select {
+    box-sizing: border-box;
+    border: 1px solid #adadad;
+    border-radius: 1px;
+    padding: 0.6rem 1rem 0.6rem;
+    color: #303030;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    height: 33px;
+    border-radius: 3px; /* tighten border radius of all form fields */
+}
+
+
+.admin__fieldset-wrapper-content .admin__fieldset {
+	padding: 20px;
+    background: #fff;  /* updated background colour */
+    border-radius: 8px; /* added radius */
+    margin-bottom: 16px;
+}
+
+.page-layout-admin-login {
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #64748f; /* updated background colour */
+    height: 101%;
+    max-height: 100%;
+    min-width: 50rem;
+}
+
+.page-layout-admin-login .page-wrapper {
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    /* border: 1px solid #e3e3e3; */
+    box-shadow: 0 0px 0px 0 #000; 
+    display: block;
+    float: none;
+    margin: auto;
+    max-width: 45rem;
+    min-height: 30rem;
+    min-width: 0;
+    padding: 40px 80px 50px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.admin__field:not(.admin__field-option) > .admin__field-label {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;  /* Updated to Open Sans from  Poppins Font */
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 3.2rem;
+    padding: 0;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+
+
+
+.action-select-wrap .action-select:after {
+    border-color: #fff transparent transparent transparent;
+}
+
+.data-grid-filters-action-wrap .action-default._active {
+    background-color: #f8f8f8;
+    border-bottom-color: #f8f8f8;
+    border-right-color: #ccc;
+    font-weight: 600;
+    margin: -0.1rem 0 0;
+    padding-bottom: 1.6rem;
+    padding-top: 0.8rem;
+    position: relative;
+    z-index: 281;
+    color: #000;
+}
+
+
+
+
+.data-grid-filters-action-wrap .action-default:before {
+     color: #000000; /* Updated colour */
+}
+
+
+.data-grid-filters-action-wrap .action-default._active:after {
+    background-color: #0066ff;
+}
+
+.admin__action-multiselect-wrap .admin__action-multiselect {
+    border: 1px solid #adadad;
+    border-radius: 3px;
+}
+
+
+.admin__control-select, .ui-datepicker .ui-datepicker-title select, #mgzreports-datepicker select.monthselect, #mgzreports-datepicker select.yearselect {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-image: url(../images/arrows-bg.svg),linear-gradient(#c1c6cd, #c1c6cd),linear-gradient(#adadad, #adadad);
+    background-position: calc(100% - 12px) -34px,100%,calc(100% - 3.2rem) 0;
+    background-size: auto,3.2rem 100%,1px 100%;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    min-width: 8.5rem;
+    padding-bottom: 0.6rem;
+    padding-right: 4.4rem;
+    padding-top: 0.6rem;
+    transition: border-color .1s linear;
+}
+
+.actions-split .action-default {
+    border-radius: 3px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.actions-split .action-toggle {
+	border-radius: 3px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: #fff;
+    border-color: #0066ff;
+}
+
+
+
+.abs-action-menu, .actions-split .dropdown-menu, .actions-split .action-menu, .actions-split .abs-action-menu .action-submenu, .actions-split .action-menu .action-submenu {
+    border: 1px solid #64748f;
+}
+
+.actions-split.active .action-toggle.action-primary, .actions-split._active .action-toggle.action-primary, .actions-split.active .action-toggle.primary, .actions-split._active .action-toggle.primary, .abs-action-primary:hover, .abs-action-primary:active, .abs-action-primary:focus, button.primary:hover, button.primary:active, button.primary:focus, .page-actions > button.action-primary:hover, .page-actions > button.action-primary:active, .page-actions > button.action-primary:focus, .page-actions .page-actions-buttons > button.action-primary:hover, .page-actions .page-actions-buttons > button.action-primary:active, .page-actions .page-actions-buttons > button.action-primary:focus, .page-actions > button.primary:hover, .page-actions > button.primary:active, .page-actions > button.primary:focus, .page-actions .page-actions-buttons > button.primary:hover, .page-actions .page-actions-buttons > button.primary:active, .page-actions .page-actions-buttons > button.primary:focus, .block-footer .action-add.primary:hover, .block-footer .action-add.primary:active, .block-footer .action-add.primary:focus, .page-actions > .block-footer .action-add.action-primary:hover, .page-actions > .block-footer .action-add.action-primary:active, .page-actions > .block-footer .action-add.action-primary:focus, .page-actions .page-actions-buttons > .block-footer .action-add.action-primary:hover, .page-actions .page-actions-buttons > .block-footer .action-add.action-primary:active, .page-actions .page-actions-buttons > .block-footer .action-add.action-primary:focus, .page-actions > .block-footer .action-add.primary:hover, .page-actions > .block-footer .action-add.primary:active, .page-actions > .block-footer .action-add.primary:focus, .page-actions .page-actions-buttons > .block-footer .action-add.primary:hover, .page-actions .page-actions-buttons > .block-footer .action-add.primary:active, .page-actions .page-actions-buttons > .block-footer .action-add.primary:focus {
+    background-color: #0066ff;
+    border-color: #0066ff;
+    color: #fff
+}
+
+.action-secondary {
+    background-color: #64748f;
+    border-color: #64748f;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+.page-main-actions:not(._hidden) .page-actions .page-actions-buttons > button, .page-actions._fixed .page-actions-buttons > button {
+    color: #0066ff;
+    border-radius: 3px; 
+    background: #fff;
+   text-shadow: none;
+
+}
+
+
+
+.admin__page-nav-item._active, .admin__page-nav-item.ui-state-active {
+    border-color: #0066ff;
+}
+
+.notifications-action .notifications-counter {
+    background-color: #0066ff;
+    }
+
+
+.admin__data-grid-header .action-select-wrap .action-select:before {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+
+.section-config .config {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+
+.admin__scope-old .fieldset-wrapper, .admin__scope-old .fieldset {
+    margin: 10px;
+}
+
+.section-config {
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.data-grid th, .data-grid td {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    transition: background-color .1s linear;
+    vertical-align: middle;
+}
+
+.login-footer {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    left: 0;
+    margin: 5rem 0 2rem;
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    width: 100%;
+}
+
+.modal-footer .action-primary, .page-actions > button.action-secondary, .page-actions .page-actions-buttons > button.action-secondary, .steps-wizard .select-attributes-actions .action-default, .popup-window .magento_buttons .ok_button, .fade .actions .primary, .block-footer .action-add.secondary, .attribute-popup-actions .page-actions-buttons > .block-footer .action-add.action-default.primary, .page-actions > .block-footer .action-add.action-secondary, .page-actions .page-actions-buttons > .block-footer .action-add.action-secondary {
+     background-color: #64748f;
+    border-color: #0066ff;
+    color: #fff;
+    text-shadow: none;
+    border-radius: 3px;
+}
+
+.abs-action-secondary, .action-basic, button.secondary, .ui-dialog .ui-button, .ui-dialog .action-primary, .attribute-popup-actions .page-actions-buttons>button.action-default.primary, .modal-popup .modal-footer .action-primary, .page-actions>button.action-secondary, .page-actions .page-actions-buttons>button.action-secondary, .page-actions .page-actions-buttons>.action.action-secondary, .steps-wizard .select-attributes-actions .action-default, .popup-window .magento_buttons .ok_button, .fade .actions .primary, .attribute-popup-actions .page-actions.floating-header>button.action-default.primary, .page-actions .page-actions.floating-header>button.action-secondary, .page-actions .page-actions.floating-header>.action.action-secondary, .block-footer .action-add.secondary, .attribute-popup-actions .page-actions-buttons>.block-footer .action-add.action-default.primary, .page-actions>.block-footer .action-add.action-secondary, .page-actions .page-actions-buttons>.block-footer .action-add.action-secondary {
+    background-color: #64748f;
+    border-color: #64748f;
+    color: #fff;
+    text-shadow: none;
+}
+
+.admin__actions-switch-checkbox:checked+.admin__actions-switch-label:after {
+    background: #64748f;
+}
+
+.abs-action-wrap-triangle-right .action-primary:after, .action-wrap-next .action-primary:after {
+    border-color: transparent transparent transparent #64748f;
+}
+
+.abs-action-wrap-triangle-left .action-default:before, .abs-action-wrap-triangle-left .action-default:after, .action-wrap-prev .action-default:before, .action-wrap-prev .action-default:after {
+    border-color: transparent #64748f transparent transparent;
+    border-width: 1.7rem 1.7rem 1.6rem 0;
+    margin-right: -1.7rem;
+    right: 100%;
+}
+
+.action-default:hover, button:hover, .action-default:active, button:active, .action-default:focus, button:focus, .block-footer .action-add:hover, .block-footer .action-add:active, .block-footer .action-add:focus {
+    background: #7f93b4;
+    border-color: #7f93b4;
+}
+
+/* Reporting Element Boxes with Shadow */
+.container-report-vendor .content {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+    width: 45%;
+    border-color: #e4e7eb;
+    box-shadow: 1px 1px 8px #dcdcdc;
+}
+
+/* Project Bidding Module - Project Question Management */
+.admin__control-collapsible .admin__collapsible-block-wrapper.fieldset-wrapper .fieldset-wrapper-title {
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 3px 3px 1px 1px;
+}
+
+.admin__control-collapsible .admin__collapsible-block-wrapper .fieldset-wrapper-title .action-delete {
+    color: #64748f;
+}
+
+.admin__control-collapsible .admin__collapsible-block-wrapper .fieldset-wrapper-title .action-delete {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    position: absolute;
+    right: 4rem;
+    top: 3.2rem;
+}
+
+.admin__menu .level-0>a {
+    color: #fff;
+    }
+
+.abs-action-secondary:hover, .abs-action-secondary:active, .abs-action-secondary:focus, .action-basic:hover, .action-basic:active, .action-basic:focus, button.secondary:hover, button.secondary:active, button.secondary:focus, .ui-dialog .ui-button:hover, .ui-dialog .ui-button:active, .ui-dialog .ui-button:focus, .ui-dialog .action-primary:hover, .ui-dialog .action-primary:active, .ui-dialog .action-primary:focus, .attribute-popup-actions .page-actions-buttons>button.action-default.primary:hover, .attribute-popup-actions .page-actions-buttons>button.action-default.primary:active, .attribute-popup-actions .page-actions-buttons>button.action-default.primary:focus, .modal-popup .modal-footer .action-primary:hover, .modal-popup .modal-footer .action-primary:active, .modal-popup .modal-footer .action-primary:focus, .page-actions>button.action-secondary:hover, .page-actions>button.action-secondary:active, .page-actions>button.action-secondary:focus, .page-actions .page-actions-buttons>button.action-secondary:hover, .page-actions .page-actions-buttons>button.action-secondary:active, .page-actions .page-actions-buttons>button.action-secondary:focus, .page-actions .page-actions-buttons>.action.action-secondary:hover, .page-actions .page-actions-buttons>.action.action-secondary:active, .page-actions .page-actions-buttons>.action.action-secondary:focus, .steps-wizard .select-attributes-actions .action-default:hover, .steps-wizard .select-attributes-actions .action-default:active, .steps-wizard .select-attributes-actions .action-default:focus, .popup-window .magento_buttons .ok_button:hover, .popup-window .magento_buttons .ok_button:active, .popup-window .magento_buttons .ok_button:focus, .fade .actions .primary:hover, .fade .actions .primary:active, .fade .actions .primary:focus, .attribute-popup-actions .page-actions.floating-header>button.action-default.primary:hover, .attribute-popup-actions .page-actions.floating-header>button.action-default.primary:active, .attribute-popup-actions .page-actions.floating-header>button.action-default.primary:focus, .page-actions .page-actions.floating-header>button.action-secondary:hover, .page-actions .page-actions.floating-header>button.action-secondary:active, .page-actions .page-actions.floating-header>button.action-secondary:focus, .page-actions .page-actions.floating-header>.action.action-secondary:hover, .page-actions .page-actions.floating-header>.action.action-secondary:active, .page-actions .page-actions.floating-header>.action.action-secondary:focus, .block-footer .action-add.secondary:hover, .block-footer .action-add.secondary:active, .block-footer .action-add.secondary:focus, .attribute-popup-actions .page-actions-buttons>.block-footer .action-add.action-default.primary:hover, .attribute-popup-actions .page-actions-buttons>.block-footer .action-add.action-default.primary:active, .attribute-popup-actions .page-actions-buttons>.block-footer .action-add.action-default.primary:focus, .page-actions>.block-footer .action-add.action-secondary:hover, .page-actions>.block-footer .action-add.action-secondary:active, .page-actions>.block-footer .action-add.action-secondary:focus, .page-actions .page-actions-buttons>.block-footer .action-add.action-secondary:hover, .page-actions .page-actions-buttons>.block-footer .action-add.action-secondary:active, .page-actions .page-actions-buttons>.block-footer .action-add.action-secondary:focus {
+    background-color: #7f94b7;
+    border-color: #7f94b7;
+    box-shadow: 0 0 0 1px #7f94b7;
+    color: #fff;
+    text-decoration: none;
+}

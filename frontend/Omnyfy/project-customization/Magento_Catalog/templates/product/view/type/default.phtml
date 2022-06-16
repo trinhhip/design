@@ -1,0 +1,27 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php /* @var $block \Magento\Catalog\Block\Product\View\AbstractView */ ?>
+<?php
+$product = $block->getProduct();
+$buttonText = $product->getMadeToOrder() ? __('By Commission Only') : __('In stock');
+?>
+<?php if ($block->displayProductStockStatus()): ?>
+    <?php if ($product->isAvailable()): ?>
+        <div class="stock available" title="<?php /* @escapeNotVerified */echo __('Availability') ?>">
+            <span class="label"><?php /* @escapeNotVerified */echo __('Availability:') ?></span>
+            <span><?php /* @escapeNotVerified */echo $buttonText ?></span>
+        </div>
+    <?php else: ?>
+        <div class="stock unavailable" title="<?php /* @escapeNotVerified */echo __('Availability') ?>">
+            <span class="label"><?php /* @escapeNotVerified */echo __('Availability:') ?></span>
+            <span><?php /* @escapeNotVerified */echo __('Out of stock') ?></span>
+        </div>
+    <?php endif; ?>
+<?php endif; ?>

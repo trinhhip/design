@@ -1,0 +1,192 @@
+<?php
+/* @var \Omnyfy\VendorSignUp\Block\SignUp\Form $block */
+
+/** @var OmnyfyCustomzation\VendorSignUp\Block\Data $data */
+$data = $this->getLayout()->createBlock('\OmnyfyCustomzation\VendorSignUp\Block\Data');
+$countryList = $data->getCountryHtmlSelect();
+$helper = \Magento\Framework\App\ObjectManager::getInstance()->get(\OmnyfyCustomzation\VendorSignUp\Helper\Data::class);
+?>
+
+<div class="vendor-signup-wrapper" id="vendor-signup-wrapper">
+	<?php echo $this->getChildHtml('vendor_signup_form_before')?>
+	<div class="vendor-signup-form-wrapper">
+        <form class="form signup-omnyfy" name="vendor-signup" action="<?php #echo $block->getFormAction()?>" id="vendor-signup-form" method="post" novalidate="novalidate">
+            <input name="form_key" type="hidden" value="<?php echo $block->getFormKey();?>">
+            <input type="hidden" name="vendor_type_id" value="<?php echo $block->getVendorTypeId();?>"/>
+            <fieldset class="fieldset">
+                <div class="field notice"><?= __('Complete the form to sign up')?></div>
+                <div class="field">
+                    <label class="label" for="firstname"><?= __('First Name')?></label>
+                    <div class="control">
+                        <input type="text" placeholder="<?= __('Enter your first name')?>" class="input-class-check maximum-length-100" data-validate="{required:true}" id="firstname" name="firstname">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="lastname"><?= __('Last Name')?></label>
+                    <div class="control">
+                        <input type="text" placeholder="<?= __('Enter your last name')?>" class="input-class-check maximum-length-100" data-validate="{required:true}" id="lastname" name="lastname">
+                    </div>
+                </div>
+                <div class="field dob">
+                    <label class="label" for="dobv"><?= __('Date of Birth')?></label>
+                    <div class="control">
+                        <input class="input-class-check control-text" name="dobv" data-validate="{required:true}" id="dobv" placeholder="<?= __('Enter select your date of birth')?>" type="text">
+                        <input type="hidden" name="dob" id="dob"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="businessname"><?= __('Business Name')?></label>
+                    <div class="control">
+                        <input type="text" placeholder="<?= __('Enter your business name')?>" class="input-class-check maximum-length-100" data-validate="{required:true}" id="businessname" name="businessname">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="businessaddress"><?= __('Business Address')?></label>
+                    <div class="control">
+                        <?php
+                        $addressAutocomplete = $helper->getGoogleAddressDisabled()?'off':'on';
+                        ?>
+                        <input type="text" autocomplete="<?= $addressAutocomplete?>" data-validate="{required:true}" class="input-class-check" placeholder="<?= __('Enter your business address')?>" id="businessaddress" name="businessaddress">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="city"><?= __('City')?></label>
+                    <div class="control">
+                        <input type="text" placeholder="<?= __('Enter your city')?>" data-validate="{required:true}" class="input-class-check" id="city" name="city">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="state"><?= __('State')?></label>
+                    <div class="control">
+                        <input type="text" placeholder="<?= __('Enter your state')?>" class="input-class-check" data-validate="{required:true}" id="state" name="state">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="postcode"><?= __('Postcode')?></label>
+                    <div class="control">
+                        <input type="text" placeholder="<?= __('Enter your postcode')?>" class="input-class-check" data-validate="{required:true}" id="postcode" name="postcode">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="country"><?= __('Country')?></label>
+                    <div class="control">
+                        <?php echo $countryList?>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="contactnumber"><?= __('Contact Number')?></label>
+                    <div class="control complex-field">
+                        <div>
+                            <select id="countrycode" data-validate="{required:true}" class="input-class-check" name="countrycode">
+                                <option value=""><?= __('Country code')?></option>
+                                <?php echo $block->countrySelector();?>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="text" data-validate="{required:true}" class="input-class-check" data-msg-required="<?= __('Please enter a valid phone number.')?>" data-msg-pattern="<?= __('Please enter a valid phone number. For example 01 2345 6789 or 1234 457 890.')?>" placeholder="<?= __('Enter your contact number')?>" id="contactnumber" name="contactnumber">
+                        </div>
+                    </div>
+                </div>
+                <div class="field email">
+                    <label class="label" for="email"><?= __('Email')?></label>
+                    <div class="control email email-section">
+                        <input type="text" placeholder="<?= __('Enter your email address')?>" data-validate="{required:true, 'validate-email':true}" class="input-class-check" data-msg-required="<?= __('Please enter a correct email address.')?>" id="email" name="email">
+                        <div for="email" generated="true" class="mage-error" id="email-error"></div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="legal_entity"><?= __('Legal Entity Name')?></label>
+                    <div class="control">
+                        <input type="text" placeholder="<?= __('Enter your legal entity name')?>" class="input-class-check" data-validate="{required:true}" id="legal_entity" name="legal_entity">
+                    </div>
+                </div>
+                <div class="field">
+                <label class="label" for="businessapn"><?= __('Tax Number')?></label>
+                    <div class="control">
+                        <div id="taxnumber-apl">
+                            <select id="tax_number" class="input-class-check" data-validate="{required:true}" name="tax_number">
+                            <option value=""><?= __('Tax Name')?></option>
+                            </select>
+                        </div>
+                        <div id="contactnumber-apl">
+                            <input type="text" class="input-class-check" placeholder="<?= __('Enter your tax number')?>" data-validate="{required:true}" data-msg-required="<?= __('Enter your tax number')?>" id="businessapn" name="businessapn">
+                            <div for="businessapn" generated="true" class="mage-error" style="display:none;" id="businessapn-error"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field" style="display: none;">
+                    <label class="label" for="businessdescription"><?= __('Business Description')?></label>
+                    <div class="control">
+                        <textarea name="businessdescription" data-validate="{required:true}" id="businessdescription" title="<?= __('What’s on your mind?')?>" class="maximum-length-100 input-class-check input-text" cols="5" rows="8"></textarea>
+                    </div>
+                </div>
+
+                <!-- load custom vendor attributes -->
+                <?php echo $block->getChildHtml('vendor_attributes');?>
+
+                <input type="hidden" name="file-name" value="" />
+            </fieldset>
+
+            <?php echo $this->getChildHtml('additional.data')?>
+
+            <?php echo $this->getChildHtml('msp-recaptcha')?>
+
+            <div class="field choice newsletter">
+                <input type="checkbox" data-validate="{required:true}" name="custom-terms" title="<?php /* @escapeNotVerified */ echo __('Terms and contitions') ?>" id="custom-terms" class="checkbox">
+                <label for="custom-terms" class="label">
+                    <span>
+                        <strong class="red-star">*</strong>
+                        <?php /* @escapeNotVerified */ echo __('By continuing to sign up, you are agreeing to the')  ?>
+                        <a class="padding-title-mb" href="/terms-and-conditions">
+                            <?php /* @escapeNotVerified */ echo __('Terms and Conditions of Vermillion') ?>
+                        </a>
+                        <?php /* @escapeNotVerified */ echo __('and') ?>
+                        <a class="padding-title" href="/privacy-policy"> <?php /* @escapeNotVerified */ echo __('our Privacy Policy.') ?></a>
+                        </span>
+                </label>
+            </div>
+
+            <!--<p class="step-actions">
+                    <?/*= sprintf('By continuing to sign up, you are agreeing to the %1$s of %2$s and our %3$s',
+                    '<a href="' . $this->getUrl('terms-and-conditions') . '">' . __('Terms and Conditions') . '</a>',
+                     $block->getStoreName(),
+                    '<a href="' . $this->getUrl('privacy-policy-cookie-restriction-mode') . '">' . __('Privacy Policy.') . '</a>'
+                    )*/?>
+            </p>-->
+                <div class="actions-toolbar">
+                    <button id="cancel-signup" class="action secondary"><?= __('Cancel')?></button>
+                    <button class="action primary" id="confirm-signup"><?= __('Sign up')?></button>
+                </div>
+
+            </div>
+        </form>
+	</div>
+</div>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Omnyfy_VendorSignUp/js/form-submit": {
+            "formActionUrl": "<?= $block->getFormAction() ?>",
+            "ajaxUploadUrl": "<?= $this->getUrl('vendorsignup/upload/index') ?>",
+            "ajaxEmailValidationUrl": "<?= $block->getEmailCheckAction() ?>"
+        }
+    }
+}
+</script>
+<script>
+    require([
+        'jquery',
+        "mage/calendar"
+    ], function ($) {
+        $("#dobv").calendar({
+            dateFormat: 'dd/mm/yy',
+            altFormat: 'yy-mm-dd',
+            altField: '#dob',
+            changeYear: true,
+            changeMonth: true,
+            yearRange: "1900:2030",
+            buttonText: "Select Date",
+        });
+        $("#dobv").attr('autocomplete','off');
+    });
+</script>

@@ -1,0 +1,114 @@
+& when (@media-common = true) {
+    body {
+        &.category-inspiration {
+            .page-main {
+                max-width: unset;
+                padding-top: 0;
+
+                & > .columns {
+                    display: none;
+                }
+
+                .column.main {
+                    padding-bottom: 0;
+                }
+            }
+            .category-banner {
+                margin-bottom: 58px;
+                position: relative;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+                h1 {
+                    color: #FFFFFF;
+                    font-family: 'PlayfairDisplay';
+                    font-style: normal;
+                    font-size: 48px;
+                    line-height: 57.6px;
+                    margin-bottom: 15px;
+                    text-transform: uppercase;
+                }
+                p {
+                    color: #FFFFFF;
+                    font-family: 'PlayfairDisplay';
+                    font-size: 22px;
+                    line-height: 24px;
+                }
+                .banner-text {
+                    left: 50%;
+                    position: absolute;
+                    text-align: center;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .category-list-container {
+                margin: 0 auto;
+                max-width: 1367px;
+                padding: 0 24px;
+            }
+            .category-list {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -14px;
+            }
+            .sub-category {
+                margin: 32px 14px 0;
+                width: ~"calc((100% - 56px) / 2)";
+                text-align: center;
+                a {
+                    color: #5B5353;
+                    font-size: 24px;
+                    font-family: 'PlayfairDisplay';
+                }
+                .block-category-link {
+                    margin-bottom: 0;
+                }
+            }
+            .show-mobile {
+                color: #000000;
+                font-family: 'PlayfairDisplay';
+                font-size: 18px;
+                line-height: 22px;
+                text-align: center;
+            }
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .category-inspiration {
+            .show-mobile {
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        body.category-inspiration {
+            .sub-category {
+                margin-top: 25px;
+                width: 100%;
+            }
+            .category-banner {
+                h1 {
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+            .category-banner {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    @media screen and (max-width: 425px) {
+        body.category-inspiration {
+            .category-banner {
+                h1 {
+                    font-size: 20px;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+}

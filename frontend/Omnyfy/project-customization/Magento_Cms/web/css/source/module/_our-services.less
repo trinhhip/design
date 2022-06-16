@@ -1,0 +1,296 @@
+& when (@media-common = true) {
+    .cms-services, .cms-buyer-services, .cms-value-added-services {
+        .page-main {
+            padding-top: 70px;
+        }
+        .page-title-wrapper {
+            .page-title {
+                color: #EB3300;
+                font-size: 24px;
+                font-weight: 400;
+                letter-spacing: 0.32px;
+                line-height: 24px;
+                h1 {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        h2 {
+            color: #0C0C0B;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 32px;
+            margin-bottom: 0;
+        }
+        .page-main {
+            a {
+                font-family: 'Rasa regular';
+            }
+        }
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .content-our-services {
+            img {
+                display: block;
+            }
+            .description {
+                color: #0C0C0B;
+                font-size: 24px;
+                letter-spacing: 0.32px;
+                line-height: 32px;
+                margin: 0 auto 100px;
+                text-align: center;
+                &:first-child {
+                    p {
+                        color: #0C0C0B;
+                        font-size: 24px;
+                        letter-spacing: 0.32px;
+                        line-height: 32px;
+                        margin: 0 auto 100px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .menu-item {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin: 0 -60px 140px;
+            .item {
+                padding: 0 60px;
+                width: ~"calc(100% / 3)";
+                p {
+                    color: #0C0C0B;
+                    font-size: 24px;
+                    letter-spacing: 0.32px;
+                    line-height: 24px;
+                    margin-top: 50px;
+                    padding: 0 20px;
+                    text-align: center;
+                }
+                a {
+                    &:hover {
+                        p {
+                            color: #EB3300;
+                        }
+                    }
+                }
+            }
+        }
+        .list-item {
+            margin-bottom: 100px;
+            .item-service {
+                align-items: center;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                margin-bottom: 100px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                font-family: 'Rasa regular';
+                .image {
+                    width: 50%;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .content-item {
+                    color: #0C0C0B;
+                    font-size: 24.0005px;
+                    line-height: 33px;
+                    text-align: left;
+                    width: 50%;
+                    &.odd {
+                        h2 {
+                            font-size: 24px;
+                            color: #5B5353;
+                        }
+                        .description {
+                            color: #5B5353;
+                        }
+                    }
+                    .description {
+                        font-size: 18px;
+                        color: #0C0C0B;
+                        margin-top: 50px;
+                        margin-bottom: 0;
+                        line-height: 24px;
+                        text-align: left;
+                    }
+                    .case-study {
+                        background-color: #EB3300;
+                        color: #FFFFFF;
+                        display: inline-flex;
+                        align-items: center;
+                        font-size: 18px;
+                        padding-top: 3px;
+                        text-transform: uppercase;
+                    }
+                }
+                .description {
+                    a {
+                        color: #FFFFFF!important;
+                        background-color: #EB3300;
+                        border-radius: 5px;
+                        display: inline-block;
+                        font-family: 'Poppins';
+                        font-size: 14px;
+                        font-weight: 400;
+                        letter-spacing: 0.32px;
+                        line-height: 33px;
+                        margin-top: 50px;
+                        padding: 5px 40px;
+                    }
+                }
+            }
+            .image,
+            .content-item {
+                &:first-child {
+                    padding-right: 45px;
+                }
+                &:last-child {
+                    padding-left: 45px;
+                }
+            }
+        }
+        .footer {
+            p {
+                text-align: center;
+                a.contact {
+                    color: #FFFFFF!important;
+                    background-color: #EB3300;
+                    border-radius: 5px;
+                    display: inline-block;
+                    font-family: 'Poppins';
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 0.32px;
+                    line-height: 33px;
+                    padding: 5px 40px;
+                }
+            }
+        }
+        .testimonial {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            font-family: 'Poppins';
+            margin: 0 auto;
+            max-width: 864px;
+            padding: 0;
+            text-align: center;
+            img {
+                border-radius: 50%;
+                display: block;
+            }
+            .testimonial-content {
+                color: #5B5353;
+                display: none;
+                font-family: 'Rasa regular';
+                font-size: 24px;
+                line-height: 28.8px;
+                margin-top: 40px;
+            }
+            .testimonial-content-bottom {
+                color: #5B5353;
+                display: none;
+                font-size: 14px;
+                line-height: 16.8px;
+                margin-top: 40px;
+                &:last-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .cms-services, .cms-buyer-services, .cms-value-added-services {
+            .menu-item {
+                margin: 0 -30px 100px;
+                .item {
+                    padding: 0 30px;
+                    p {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .cms-services, .cms-buyer-services, .cms-value-added-services {
+            .columns {
+                .page-title-wrapper {
+                    h1.page-title {
+                        color: #EB3300!important;
+                    }
+                }
+            }
+            .menu-item {
+                margin: 0 -15px 40px;
+                .item {
+                    padding: 0 15px;
+                }
+            }
+            .list-item {
+                margin-bottom: 70px;
+                .item-service {
+                    flex-wrap: wrap;
+                    margin-bottom: 50px;
+                    &.hide-mobile {
+                        .image {
+                            display: none;
+                        }
+                    }
+                    .image, .content-item {
+                        padding: 0;
+                        width: 100%;
+                        &:first-child {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+            .testimonial {
+                .testimonial-author {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        .cms-services, .cms-buyer-services, .cms-value-added-services {
+            .content-our-services {
+                img {
+                    width: 100%;
+                }
+            }
+            .menu-item {
+                margin: 0 -15px 40px;
+                flex-wrap: wrap;
+                .item {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    padding: 0 15px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

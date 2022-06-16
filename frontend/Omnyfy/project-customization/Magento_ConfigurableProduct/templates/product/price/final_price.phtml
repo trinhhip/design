@@ -1,0 +1,78 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+use Magento\Catalog\Pricing\Price\TierPrice;
+use Magento\Framework\Pricing\Amount\AmountInterface;
+
+?>
+
+<?php
+/** @var \Magento\ConfigurableProduct\Pricing\Render\FinalPriceBox$block */
+
+/** @var \Magento\Framework\Pricing\Price\PriceInterface $priceModel */
+$priceModel = $block->getPriceType('regular_price');
+
+/** @var \Magento\Framework\Pricing\Price\PriceInterface $finalPriceModel */
+$finalPriceModel = $block->getPriceType('final_price');
+$idSuffix = $block->getIdSuffix() ? $block->getIdSuffix() : '';
+$schema = ($block->getZone() == 'item_view') ? true : false;
+
+
+$saleableItem = $block->getSaleableItem();
+/** @var TierPrice $price */
+$price = $saleableItem->getPriceInfo()->getPrice(TierPrice::PRICE_CODE);
+$tierPriceList = $price->getTierPriceList();
+$tierPrices = [];
+foreach ($tierPriceList as $tierPrice) {
+    /** @var AmountInterface $price */
+    $price = $tierPrice['price'];
+    $tierPrices[] = $price->getValue();
+}
+
+$maxPrice =  null;
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+/** @var \Magento\Framework\Pricing\Adjustment\CalculatorInterface $calculator */
+$calculator = $objectManager->get(\Magento\Framework\Pricing\Adjustment\CalculatorInterface::class);
+$maxPriceAmount = $calculator->getAmount($maxPrice, $saleableItem, 'tax');
+?>
+
+<span class="normal-price">
+    <?php
+    $arguments = [
+        'display_label' => __('Starting from'),
+        'price_id' => $block->getPriceId('product-price-' . $idSuffix),
+        'price_type' => 'finalPrice',
+        'include_container' => true,
+        'schema' => $schema
+    ];
+
+    /* @noEscape */ echo $block->renderAmount($finalPriceModel->getAmount(), $arguments);
+    ?>
+</span>
+
+<?php if (!$block->isProductList() && $block->hasSpecialPrice()) : ?>
+    <span class="old-price sly-old-price no-display">
+        <?= /* @noEscape */ $block->renderAmount($priceModel->getAmount(), [
+            'display_label'     => __('Regular Price'),
+            'price_id'          => $block->getPriceId('old-price-' . $idSuffix),
+            'price_type'        => 'oldPrice',
+            'include_container' => true,
+            'skip_adjustments'  => true
+        ]); ?>
+    </span>
+<?php endif; ?>
+
+<?php if($maxPrice): ?>
+<a href="<?= $block->escapeUrl($block->getSaleableItem()->getProductUrl()) ?>" class="maximal-price-link">
+    <?= /* @noEscape */
+    $block->renderAmount($maxPriceAmount, [
+        'display_label' => __(''),
+        'include_container' => false,
+        'skip_adjustments' => true
+    ]) ?>
+</a>
+<?php endif; ?>

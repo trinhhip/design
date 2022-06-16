@@ -1,0 +1,100 @@
+& when (@media-common = true) {
+    body.cms-press-media, body.cms-press {
+        .page-main {
+            max-width: unset;
+            padding-bottom: 66px;
+            padding-top: 0;
+        }
+        .breadcrumbs {
+            display: none;
+        }
+        .fullwidth-banner {
+            margin-bottom: 100px;
+            position: relative;
+            img {
+                width: 100%;
+            }
+        }
+        h1 {
+            color: #FFFFFF;
+            font-family: 'PlayfairDisplay';
+            font-style: normal;
+            font-size: 48px;
+            left: 50%;
+            line-height: 57.6px;
+            margin-bottom: 15px;
+            position: absolute;
+            text-align: center;
+            text-transform: uppercase;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .press-container {
+            margin: 0 auto;
+            max-width: 1367px;
+            padding: 0 24px;
+        }
+        .press-wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -9px;
+        }
+
+        .press {
+            align-items: center;
+            background-color: #F9F8F8;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin: 0 9px 16px;
+            padding-bottom: 55px;
+            padding-top: 55px;
+            width: ~"calc((100% - 54px)/ 3)";
+            img {
+                max-width: 231px;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            a {
+                border: 1px solid #EB3300;
+                color: #EB3300;
+                font-family: 'Poppins';
+                font-size: 14px;
+                line-height: 14px;
+                padding: 11px 21px;
+            }
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        body.cms-press-media, body.cms-press {
+            .press {
+                padding-bottom: 50px;
+                padding-top: 50px;
+                width: ~"calc((100% - 36px) / 2)";
+                p {
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        body.cms-press-media, body.cms-press {
+            h1 {
+                font-size: 24px;
+                line-height: 28px;
+            }
+            .fullwidth-banner {
+                margin-bottom: 50px;
+            }
+            .press-container {
+                padding: 0;
+            }
+            .press {
+                width: 100%;
+            }
+        }
+    }
+}

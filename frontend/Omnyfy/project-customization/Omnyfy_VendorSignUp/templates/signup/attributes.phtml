@@ -1,0 +1,9 @@
+<?php
+/** @var $block \Omnyfy\VendorSignUp\Block\SignUp\Attributes */
+$attributes = $block->getVendorAttributes();
+
+foreach($attributes as $attribute) {
+    echo $block->getAttributeHtml($attribute);
+}
+
+echo $block->getChildHtml();
